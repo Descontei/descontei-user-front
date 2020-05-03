@@ -2,28 +2,32 @@
   <div class="w-full h-full">
     <heading logo="main-logo" classes="bg-gray-100" />
     <region-view :region="region" />
+
     <food-viewer
       sub-title="30 minutos"
       title="Padaria"
-      class="animated fadeIn faster"
+      class="animated fadeInDown faster"
       align="left"
     />
     <food-viewer
       sub-title="25 minutos"
       title="Japonês"
-      class="animated fadeIn faster"
+      :style="{ animationDelay: '300ms' }"
+      class="animated fadeInDown faster"
       align="left"
     />
     <food-viewer
       sub-title="1 hora"
       title="Docêrias"
-      class="animated fadeIn faster"
+      :style="{ animationDelay: '450ms' }"
+      class="animated fadeInDown faster"
       align="left"
     />
     <food-viewer
       sub-title="1 hora e 30 minutos"
       title="Fitness"
-      class="animated fadeIn faster"
+      :style="{ animationDelay: '500ms' }"
+      class="animated fadeInDown faster"
       align="left"
     />
   </div>

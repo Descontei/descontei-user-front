@@ -3,7 +3,7 @@
     :style="{
       backgroundImage: 'url(main-banner.jpg)'
     }"
-    class="relative flex flex-col items-center justify-center w-full bg-center bg-no-repeat bg-cover h-6/12"
+    class="relative flex flex-col items-center justify-center w-full bg-center bg-no-repeat bg-cover h-9/12 lg:h-6/12"
   >
     <span
       class="absolute top-0 left-0 z-10 w-full h-full bg-main-green-primary bg-opacity-75"

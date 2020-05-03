@@ -6,7 +6,7 @@
       :class="{
         'items-start': align === 'left'
       }"
-      class="flex flex-col justify-center text-center"
+      class="flex flex-col justify-center w-10/12 text-center lg:w-auto"
     >
       <h2 class="px-5 text-2xl font-black text-gray-800 lg:px-0 lg:text-3xl">
         {{ title }}
