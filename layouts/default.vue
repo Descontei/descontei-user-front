@@ -1,15 +1,17 @@
 <template>
   <div class="w-full h-full">
     <main-loader />
+    <modal-add-to-cart />
     <nuxt />
   </div>
 </template>
 
 <script>
 import MainLoader from '../components/MainLoader'
+import ModalAddToCart from '../components/ModalAddToCart'
 
 export default {
-  components: { MainLoader }
+  components: { MainLoader, ModalAddToCart }
 }
 </script>
 

@@ -64,6 +64,7 @@ const global = {
       // store.dispatch('setGlobalLoading', false);
     }
   }),
+  modal: newGlobalEvent('modal'),
   notification: {
     main: newGlobalEvent('notification-main')
   }

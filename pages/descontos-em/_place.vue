@@ -1,6 +1,10 @@
 <template>
   <div class="w-full h-full">
-    <heading logo="main-logo" classes="bg-gray-100" />
+    <heading
+      logo="main-logo"
+      shop-cart="shopping-cart-black"
+      classes="bg-gray-100"
+    />
     <region-view :region="region" />
 
     <food-viewer
@@ -8,6 +12,7 @@
       title="Padaria"
       class="animated fadeInDown faster"
       align="left"
+      @card-click="handleCardClick"
     />
     <food-viewer
       sub-title="25 minutos"
@@ -34,6 +39,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import Heading from '../../components/Heading'
 import FoodViewer from '../../components/FoodViewer'
 import RegionView from '../../components/RegionView'
@@ -54,6 +60,22 @@ export default {
   }),
   mounted () {
     this.$g.loading.hide()
+  },
+  methods: {
+    ...mapActions({
+      addToCart: 'addToCart'
+    }),
+    handleCardClick (payload) {
+      this.$g.modal.show({
+        image: payload.image,
+        discount: payload.discount,
+        title: `Adicionar ${payload.title} ao carrinho`,
+        body: payload.subTitle,
+        onDone: (item) => {
+          this.addToCart(item)
+        }
+      })
+    }
   }
 }
 </script>

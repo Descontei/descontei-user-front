@@ -24,6 +24,7 @@
           }"
           :image="card.image"
           :title="card.title"
+          @card-click="payload => $emit('card-click', payload)"
           :sub-title="card.subTitle"
         />
       </div>
