@@ -39,28 +39,32 @@ const cards = [
     title: 'Padarias',
     description: 'Pães, cafés, tortas',
     discount: 16,
-    price: 10
+    price: 10,
+    id: 123
   },
   {
     image: 'japa.jpg',
     title: 'Japonês',
     description: 'Sushis, Temakis, Chás',
     discount: 12,
-    price: 40
+    price: 40,
+    id: 456
   },
   {
     image: 'sweet.jpg',
     title: 'Docêrias',
     description: 'Sorvetes, Bolos',
     discount: 10,
-    price: 10
+    price: 10,
+    id: 678
   },
   {
     image: 'fitness.jpg',
     title: 'Fitness',
     description: 'Saladas, Açaís',
     discount: 13,
-    price: 4
+    price: 4,
+    id: 938
   }
 ]
 

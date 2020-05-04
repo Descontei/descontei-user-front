@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "animate.css": "^3.7.2",
+    "card": "^2.4.0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
