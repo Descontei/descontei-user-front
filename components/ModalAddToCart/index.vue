@@ -23,7 +23,7 @@
               {{ props.title }}
             </h1>
             <h2 class="text-sm font-bold text-gray-700">
-              {{ props.discount }}% de desconto!
+              {{ props.price | formatPrice }} com {{ props.discount }}% de desconto!
             </h2>
             <div class="max-w-xl mt-5 font-semibold text-gray-600">
               {{ props.body }}
@@ -44,8 +44,13 @@
 </template>
 
 <script>
+const formatPrice = value => value.toLocaleString('pt-BR', { currency: 'BRL', style: 'currency' })
+
 export default {
   name: 'Modal',
+  filters: {
+    formatPrice
+  },
   data () {
     return {
       props: {

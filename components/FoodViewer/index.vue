@@ -22,10 +22,8 @@
           :class="{
             'mr-0 mb-0': index === cards.length
           }"
-          :image="card.image"
-          :title="card.title"
+          :food="card"
           @card-click="payload => $emit('card-click', payload)"
-          :sub-title="card.subTitle"
         />
       </div>
     </div>
@@ -39,22 +37,30 @@ const cards = [
   {
     image: 'bread.jpg',
     title: 'Padarias',
-    subTitle: 'Pães, cafés, tortas'
+    description: 'Pães, cafés, tortas',
+    discount: 16,
+    price: 10
   },
   {
     image: 'japa.jpg',
     title: 'Japonês',
-    subTitle: 'Sushis, Temakis, Chás'
+    description: 'Sushis, Temakis, Chás',
+    discount: 12,
+    price: 40
   },
   {
     image: 'sweet.jpg',
     title: 'Docêrias',
-    subTitle: 'Sorvetes, Bolos'
+    description: 'Sorvetes, Bolos',
+    discount: 10,
+    price: 10
   },
   {
     image: 'fitness.jpg',
     title: 'Fitness',
-    subTitle: 'Saladas, Açaís'
+    description: 'Saladas, Açaís',
+    discount: 13,
+    price: 4
   }
 ]
 

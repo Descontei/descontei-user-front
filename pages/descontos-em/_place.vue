@@ -67,10 +67,9 @@ export default {
     }),
     handleCardClick (payload) {
       this.$g.modal.show({
-        image: payload.image,
-        discount: payload.discount,
+        ...payload,
         title: `Adicionar ${payload.title} ao carrinho`,
-        body: payload.subTitle,
+        body: payload.description,
         onDone: (item) => {
           this.addToCart(item)
         }
