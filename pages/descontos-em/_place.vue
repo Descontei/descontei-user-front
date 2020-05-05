@@ -20,6 +20,7 @@
       :style="{ animationDelay: '300ms' }"
       class="animated fadeInDown faster"
       align="left"
+      @card-click="handleCardClick"
     />
     <food-viewer
       sub-title="1 hora"
@@ -27,6 +28,7 @@
       :style="{ animationDelay: '450ms' }"
       class="animated fadeInDown faster"
       align="left"
+      @card-click="handleCardClick"
     />
     <food-viewer
       sub-title="1 hora e 30 minutos"
@@ -34,6 +36,7 @@
       :style="{ animationDelay: '500ms' }"
       class="animated fadeInDown faster"
       align="left"
+      @card-click="handleCardClick"
     />
   </div>
 </template>

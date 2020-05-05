@@ -2,7 +2,7 @@ const ADD_TO_CART = 'ADD_TO_CART'
 const REMOVE_ITEM_FROM_CART = 'REMOVE_ITEM_FROM_CART'
 
 export const state = () => ({
-  cart: [{ image: 'japa.jpg', title: 'Adicionar Japonês ao carrinho', description: 'Sushis, Temakis, Chás', discount: 12, price: 40, id: 456, body: 'Sushis, Temakis, Chás', onDone: { _custom: { type: 'function', display: '<span>ƒ</span> onDone(item)' } } }, { image: 'bread.jpg', title: 'Adicionar Padarias ao carrinho', description: 'Pães, cafés, tortas', discount: 16, price: 10, id: 123, body: 'Pães, cafés, tortas', onDone: { _custom: { type: 'function', display: '<span>ƒ</span> onDone(item)' } } }, { image: 'sweet.jpg', title: 'Adicionar Docêrias ao carrinho', description: 'Sorvetes, Bolos', discount: 10, price: 10, id: 678, body: 'Sorvetes, Bolos', onDone: { _custom: { type: 'function', display: '<span>ƒ</span> onDone(item)' } } }]
+  cart: []
 })
 
 export const actions = {
