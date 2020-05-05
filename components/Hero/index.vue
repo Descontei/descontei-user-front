@@ -1,19 +1,25 @@
 <template>
   <div
-    :style="{
-      backgroundImage: 'url(main-banner.jpg)'
-    }"
-    class="relative flex flex-col items-center justify-center w-full bg-center bg-no-repeat bg-cover h-9/12 lg:h-6/12"
+    :style="{ backgroundColor: '#fff3ec' }"
+    class="relative flex flex-col items-center justify-center w-full lg:bg-top h-6/12 lg:h-7/12"
   >
-    <span
-      class="absolute top-0 left-0 z-10 w-full h-full bg-main-green-primary bg-opacity-75"
-    />
+    <div class="absolute bottom-0 left-0 items-end justify-between hidden w-full h-full md:flex">
+      <div class="-mb-12">
+        <img src="/ilu-1.png" alt="">
+      </div>
+      <div class="-mb-10">
+        <img src="/ilu-2.png" alt="">
+      </div>
+    </div>
 
-    <div class="flex flex-col justify-center mt-10 text-center lg:mt-10">
-      <h1 class="z-20 px-5 text-3xl font-black text-white lg:px-0 lg:text-5xl">
-        A força do empreendedor brasileiro.
+    <div class="flex flex-col items-center justify-center text-center">
+      <div class="w-64 mb-5">
+        <img class="w-full" src="/logodescontei.png" alt="">
+      </div>
+      <h1 class="z-20 px-5 text-3xl font-black text-black lg:px-0 lg:text-5xl">
+        A força do empreendedor brasileiro
       </h1>
-      <h2 class="z-20 px-5 text-xl font-medium text-white lg:px-0 lg:text-2xl">
+      <h2 class="z-20 px-5 text-xl font-medium text-black lg:px-0 lg:text-2xl">
         Estimule o comércio local para passarmos juntos pela crise.
       </h2>
       <div class="z-20 flex flex-col items-center w-full px-5 mt-5 lg:px-5 lg:mt-12">

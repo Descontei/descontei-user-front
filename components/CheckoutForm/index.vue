@@ -31,10 +31,16 @@
         </div>
 
         <div class="flex items-center">
-          <button class="text-4xl text-gray-800" @click="() => removeItemFromCart(item)">
-            &times;
+          <span>{{ item.priceWithDiscount | formatPrice }}</span>
+
+          <button class="p-0 text-2xl text-gray-800" @click="() => removeItemFromCart(item)">
+            ✖️
           </button>
         </div>
+      </div>
+
+      <div class="flex items-center justify-end w-full mt-5">
+        <span class="ml-5 text-xl font-bold text-gray-800">Total {{ total | formatPrice }}</span>
       </div>
 
       <h2 class="px-5 mt-16 text-xl font-black text-gray-800 lg:px-0 lg:text-2xl">
@@ -43,25 +49,49 @@
       <client-only>
         <credit-card />
       </client-only>
+
+      <div class="flex items-center justify-end w-full mt-12">
+        <button class="w-full px-10 py-4 text-lg text-white rounded-lg lg:w-auto bg-main-green-primary" @click="finish">
+          ✓ Finalizar pedido
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import CreditCard from '../CreditCard'
 
+const formatPrice = value => value.toLocaleString('pt-BR', { currency: 'BRL', style: 'currency' })
+
 export default {
+  filters: {
+    formatPrice
+  },
   components: { CreditCard },
   computed: {
-    ...mapState({
-      items: state => state.cart
-    })
+    ...mapGetters({
+      items: 'cartWithDiscountCalc'
+    }),
+    total () {
+      return this.items.reduce((acc, cur) => {
+        return acc + cur.priceWithDiscount
+      }, 0)
+    }
   },
   methods: {
     ...mapActions({
       removeItemFromCart: 'removeItemFromCart'
-    })
+    }),
+    finish () {
+      this.$g.loading.show()
+
+      setTimeout(() => {
+        this.$g.loading.hide()
+        this.$router.push({ path: '/pedido/acompanhar' })
+      }, 1000)
+    }
   }
 }
 </script>

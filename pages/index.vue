@@ -1,6 +1,9 @@
 <template>
   <div class="w-full h-full">
-    <heading />
+    <heading
+      shop-cart="shopping-cart-black"
+      :is-hidden-logo="true"
+    />
     <hero />
     <food-viewer />
   </div>
